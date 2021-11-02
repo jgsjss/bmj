@@ -5,6 +5,8 @@
     <!-- 카카오맵 api 라이브러리 호출 -->
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
+
+
         .uploadResult {
             object-fit: cover;
             width: 100%;
@@ -100,7 +102,16 @@
         .content {
             display: table;
             margin-left: auto;
-            margin-right: auto;
+            margin-right: auto
+        }
+
+        h1 {
+            color: #1e7e34;
+        }
+
+        label, input {
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 20px;
         }
 
     </style>
@@ -121,7 +132,8 @@
 
             <div class="row">
                 <div class="col-md-12"><input id="RestaurantTitle" type="text" class="form-control" name="title"
-                                              th:value="${dto.title}" readonly></div>
+                                              th:value="${dto.title}" readonly
+                                              style="font-family: 'Do Hyeon', sans-serif"></div>
                 <!--      <div class="col-md-8"><input id="RestaurantTitle2" type="text" class="form-control" name="title" th:value="${dto.avg}"  readonly></div>-->
             </div>
             <br/>
@@ -201,13 +213,13 @@
                         <div class="modal-header">
                             <h5 class="modal-title">맛집 리뷰</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <!--       <span aria-hidden="true">&times;</span>-->
                             </button>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <!-- <input type="hidden" name="author" class="form-control" id="inputAuthor" th:value="${author}">-->
-                                <label>작성자(닉네임) / 회원이메일입력</label>
+                                <label>회원이메일입력</label>
                                 <!-- <input type="text" class="form-control" name="email" th:value="${writer}" readonly>-->
                                 <input type="text" class="form-control" name="email">
                             </div>
@@ -220,10 +232,10 @@
                                 <input type="text" class="form-control" name="text" placeholder="리뷰평을 작성하시오.">
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                        <div class="modal-footer"> <!--class="btn btn-secondary"  data-dismiss="modal"-->
+                            <button type="button" class="btn btn-primary closeBtn">닫기</button>
                             <button type="button" class="btn btn-primary reviewSaveBtn">저장</button>
-                            <!--   <button type="button" class="btn btn-warning modifyBtn">수정</button> -->
+                            <button type="button" class="btn btn-warning modifyBtn">수정</button>
                             <button type="button" class="btn btn-danger removeBtn">삭제</button>
                         </div>
                     </div>
@@ -243,7 +255,9 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                        <!--  <a href="#">
+                    &times; data-dismiss="modal"</a>-->
+                        <button type="button" class="btn btn-primary closeBtn">닫기</button>
                     </div>
                 </div>
             </div>
@@ -448,6 +462,14 @@
                     $(".imageModal").modal('show');
                 })
             });
+
+
+            $(".closeBtn").click(function () {
+
+                $(".modal").modal('hide');
+
+            });
+
         </script>
 
 

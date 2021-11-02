@@ -124,6 +124,12 @@ public class ResturantController {
 
     }
 
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
+    @GetMapping("/eatDeal2")
+    public void eatDeal2() {
+
+    }
+
     @GetMapping({"/categoryHansik", "/categoryIlsik", "/categoryJongsik", "/categoryYangsik", "/categoryCafe"})
     public void categoryIlsik(PageRequestDTO pageRequestDTO, Model model) {
         log.info("get categoryilsik......");
