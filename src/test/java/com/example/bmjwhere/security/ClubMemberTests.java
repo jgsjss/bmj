@@ -21,13 +21,13 @@ public class ClubMemberTests {
     @Test
     public void insertAdminMember() {
         ClubMember clubMember = ClubMember.builder()
-                .email("kkk1234@naver.com")
-                .name("admin1")
+                .email("user@naver.com")
+                .name("사용자")
                 .fromSocial(false)
                 .password(passwordEncoder.encode("1111"))
                 .build();
 
-            clubMember.addMemberRole(ClubMemberRole.ADMIN);
+            clubMember.addMemberRole(ClubMemberRole.USER);
 
             repository.save(clubMember);
     }
