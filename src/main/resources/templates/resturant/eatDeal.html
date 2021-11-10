@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.w3.org/1999/xhtml">
 <th:block th:replace="~{layout/basic :: setContent(~{this :: content})}">
     <th:block th:fragment="content">
 
@@ -426,7 +426,7 @@
                         <span sec:authorize="isAnonymous()">
                             <a href="http://localhost:8081/resturant/eatDeal2"> <img class="barcode" src="/image/barcode4.png"></a><br/></span>
                      <span sec:authorize="isAuthenticated()">
-                        <img class="barcode" src="/image/barcode3.png"></span>
+                        <img class="barcode" src="/image/barcode3.PNG"></span>
                 </div>
             </div>
             </div>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"><head></head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head></head>
 
 
 <body>
@@ -17,15 +18,15 @@
             <div class="form-group row">
                 <label for="author" class="col-sm-2 col-form-label"><strong>작성자</strong></label>
                 <div class="col-sm-10">
-                    <p class="" th:text="${author}" id = "author"></p>
-                    <input type="text" name="author" class="form-control" id="inputAuthor2" th:value="${author}" readonly>
+                    <p class="" th:text="${author}" id="author"></p>
+                    <input type="text" name="author" class="form-control" id="inputAuthor2" th:value="${author}"
+                           readonly>
                     <input type="hidden" name="author" class="form-control" id="inputAuthor" th:value="${author}">
                 </div>
             </div>
 
         </div>
         <p></p>
-
     </th:block>
 </th:block>
 
